@@ -6,7 +6,7 @@ class Hombre extends Paciente {
     }
     
     indexGrasa() {
-        let indexGrasa = super.indexGrasa();
+        let indexGrasa = (super.indexGrasa()-5.4).toFixed(2);
         return indexGrasa;
     }
    
@@ -15,8 +15,9 @@ class Hombre extends Paciente {
         return rCC;
     }
     riesgoSalud(){
+        let rCC = this.relacionCC();
         let riesgoSalud = "";
-        if(rCC >= 0.82){
+        if(rCC >= 0.95){
             riesgoSalud = "Sí";
         } else {
             riesgoSalud = "No";
@@ -24,18 +25,10 @@ class Hombre extends Paciente {
         return riesgoSalud;
     }
     
-    toString(){
-        let mostrar = super.toString();
-        mostrar += `\n Número de hélices: ${this.helix}`;
-        mostrar += `Circumferencia Cadera: ${this.circCadera}\n`;
-        
-        mostrar += `\n Distancia: ${this.calcDistancia()}`
-        return mostrar;
-    }
+  
 
     toString() {
         let mostrar = super.toString();
-        mostrar += `\n Número de embarazos: ${this.numEmbarazos}`;
         mostrar += `\n Index Grasa: ${this.indexGrasa()}`;
         mostrar += `\n RCC: ${this.relacionCC()}`;
         mostrar += `\n Riesgo Salud: ${this.riesgoSalud()}`;
