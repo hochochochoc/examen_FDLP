@@ -6,7 +6,7 @@ class Mujer extends Paciente {
     }
     
     indexGrasa() {
-        let indexGrasa = (super.indexGrasa()).toFixed(2);
+        let indexGrasa = (super.indexGrasa());
         return indexGrasa;
     }
    
