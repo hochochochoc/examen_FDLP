@@ -6,7 +6,7 @@ class Mujer extends Paciente {
     }
     
     indexGrasa() {
-        let indexGrasa = super.indexGrasa();
+        let indexGrasa = (super.indexGrasa()).toFixed(2);
         return indexGrasa;
     }
    
@@ -15,6 +15,7 @@ class Mujer extends Paciente {
         return rCC;
     }
     riesgoSalud(){
+        let rCC = this.relacionCC();
         let riesgoSalud = "";
         if(rCC >= 0.82){
             riesgoSalud = "Sí";
@@ -23,15 +24,7 @@ class Mujer extends Paciente {
         }
         return riesgoSalud;
     }
-    
-    toString(){
-        let mostrar = super.toString();
-        mostrar += `\n Número de hélices: ${this.helix}`;
-        mostrar += `Circumferencia Cadera: ${this.circCadera}\n`;
-        
-        mostrar += `\n Distancia: ${this.calcDistancia()}`
-        return mostrar;
-    }
+   
 
     toString() {
         let mostrar = super.toString();
@@ -44,19 +37,4 @@ class Mujer extends Paciente {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
