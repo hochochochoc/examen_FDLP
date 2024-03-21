@@ -7,20 +7,11 @@
 </head>
 <body>
 
-    <form id="edificioActionsForm">
-        <p>Elige opción:</p>
-        
-        <input type="radio" id="darDeAlta" name="accionElegida" value="darDeAlta">
-        <label for="darDeAlta">Dar de Alta</label><br>
-        
-        <input type="radio" id="eliminarEdificio" name="accionElegida" value="eliminarEdificio">
-        <label for="eliminarEdificio">Eliminar Edificio</label><br>
-        
-        <input type="radio" id="mostrarEdificio" name="accionElegida" value="mostrarEdificio">
-        <label for="mostrarEdificio">Mostrar Edificio</label><br>
-        <br>
-        <button type="button" onclick="escoger()">Escoger</button>
-    </form>
+    <button id="calcular" onclick="calcular()">Mostrar Datos</button>
+    <button id="IMC" onclick="IMC()">Mostrar IMC y Categoría de peso</button>
+    <button id="indexGrasa" onclick="indexGrasa()">Mostrar Indice de Grasa</button>
+    <button id="rcc" onclick="rcc()">Mostrar Relación Cintura Cadera</button>
+
 
     <script src="clasePaciente.js"></script>
     <script src="claseMujer.js"></script>
