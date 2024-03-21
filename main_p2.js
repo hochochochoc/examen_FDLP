@@ -18,11 +18,6 @@ function calcular(){
         
         alert(paciente.toString()); 
        
-        
     }
-
-
-
-
 
 }
