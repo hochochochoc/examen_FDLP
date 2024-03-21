@@ -21,7 +21,7 @@ class Paciente {
     }
 
     indexCatPes(){
-        let indexCatPes = -1;
+        let indexCatPes = 0;
         if(Imc < 18.5){
             indexCatPes = 1;
         } else if (Imc < 25){
@@ -35,29 +35,25 @@ class Paciente {
     }
 
     indexGrasa(){
-        let indexGrasa = -1;
+        let indexGrasa = 0;
         indexGrasa = 1.2 * Imc + 0.23 * this.edad;
     }
 
+    relacionCC(){
+        let rCC = 0;
+        rCC = this.circCintura / this.circCadera;
+    }
 
-
-
-
-
-
-
-
-    /*getDni() {return this.#dni}
-    getNacionalidad() {return this.#nacionalidad}
-    getEdad() {return this.#edad}
-    getVuelos() {return this.#vuelos}*/
-
-    // Setters no necesarios
 
     toString() {
-        return `DNI del cliente: ${this.getDni()}\n` +
-                `Nacionalidad: ${this.getNacionalidad()}\n`+
-                `Edad: ${this.getEdad()}\n`+
-                `Vuelos: ${this.getVuelos()}`;
+        let mostrar = `DNI del paciente: ${this.dni}\n` +
+                `nombre Completo: ${this.nomComplet}\n`+
+                `Edad: ${this.edad}\n`+
+                `Peso: ${this.peso}`+
+                `Estatura: ${this.estatura}\n`+
+                `Circumferencia Cintura: ${this.circCintura}\n`+
+                `Circumferencia Cadera: ${this.circCadera}\n`+
+                `El/la paciente ${this.nomComplet} tiene un IMC de ${this.circCadera}\n su categoría de peso es: ${this.indexCatPes}`;
+    return mostrar;
     }
 }
