@@ -15,7 +15,7 @@ class Paciente {
 
 
     indexImc(){
-        let imc = (this.peso/ (this.estatura*this.estatura)).toFixed(3);
+        let imc = (this.peso/ (this.estatura*this.estatura));
         console.log("IMC: ", imc);
         return imc;
     }
