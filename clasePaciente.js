@@ -15,18 +15,19 @@ class Paciente {
 
 
     indexImc(){
-        let Imc = peso/ (estatura*estatura);
-        console.log("IMC: ", Imc);
-        return Imc;
+        let imc = (this.peso/ (this.estatura*this.estatura)).toFixed(3);
+        console.log("IMC: ", imc);
+        return imc;
     }
 
     indexCatPes(){
+        let imc = this.indexImc();
         let indexCatPes = 0;
-        if(Imc < 18.5){
+        if(imc < 18.5){
             indexCatPes = 1;
-        } else if (Imc < 25){
+        } else if (imc < 25){
             indexCatPes = 2;
-        }else if (Imc < 30){
+        }else if (imc < 30){
             indexCatPes = 3;
         }else {
             indexCatPes = 4;
@@ -35,13 +36,16 @@ class Paciente {
     }
 
     indexGrasa(){
+        let imc = this.indexImc();
         let indexGrasa = 0;
-        indexGrasa = 1.2 * Imc + 0.23 * this.edad;
+        indexGrasa = (1.2 * imc + 0.23 * this.edad).toFixed(2);
+        return indexGrasa;
     }
 
     relacionCC(){
         let rCC = 0;
-        rCC = this.circCintura / this.circCadera;
+        rCC = (this.circCintura / this.circCadera).toFixed(2);
+        return rCC;
     }
 
 
@@ -49,11 +53,11 @@ class Paciente {
         let mostrar = `DNI del paciente: ${this.dni}\n` +
                 `nombre Completo: ${this.nomComplet}\n`+
                 `Edad: ${this.edad}\n`+
-                `Peso: ${this.peso}`+
+                `Peso: ${this.peso}\n`+
                 `Estatura: ${this.estatura}\n`+
                 `Circumferencia Cintura: ${this.circCintura}\n`+
                 `Circumferencia Cadera: ${this.circCadera}\n`+
-                `El/la paciente ${this.nomComplet} tiene un IMC de ${this.circCadera}\n su categoría de peso es: ${this.indexCatPes}`;
+                `El/la paciente ${this.nomComplet} tiene un IMC de ${this.indexImc()}\nsu categoría de peso es: ${this.indexCatPes()}`;
     return mostrar;
     }
 }
