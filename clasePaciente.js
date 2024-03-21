@@ -22,15 +22,15 @@ class Paciente {
 
     indexCatPes(){
         let imc = this.indexImc();
-        let indexCatPes = 0;
+        let indexCatPes = "";
         if(imc < 18.5){
-            indexCatPes = 1;
+            indexCatPes = "peso insuficiente";
         } else if (imc < 25){
-            indexCatPes = 2;
+            indexCatPes = "peso normal";
         }else if (imc < 30){
-            indexCatPes = 3;
+            indexCatPes = "sobrepeso";
         }else {
-            indexCatPes = 4;
+            indexCatPes = "obesidad";
         }
         return indexCatPes;
     }
