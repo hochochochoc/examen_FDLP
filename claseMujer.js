@@ -28,10 +28,10 @@ class Mujer extends Paciente {
 
     toString() {
         let mostrar = super.toString();
-        mostrar += `\n Número de embarazos: ${this.numEmbarazos}`;
-        mostrar += `\n Index Grasa: ${this.indexGrasa()}`;
-        mostrar += `\n RCC: ${this.relacionCC()}`;
-        mostrar += `\n Riesgo Salud: ${this.riesgoSalud()}`;
+        mostrar += `\nNúmero de embarazos: ${this.numEmbarazos}`;
+        mostrar += `\nIndex Grasa: ${this.indexGrasa()}`;
+        mostrar += `\nRCC: ${this.relacionCC()}`;
+        mostrar += `\nRiesgo Salud: ${this.riesgoSalud()}`;
     
         return mostrar;
     }
